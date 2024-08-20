@@ -3,14 +3,12 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/QueenDekim/telegram-wireguard-vpn-bot?label=commits)
 ![GitHub Repo stars](https://img.shields.io/github/stars/QueenDekim/telegram-wireguard-vpn-bot)
 
----
-<h1 align=center>This is fork of <a href="https://github.com/svishnevskii/telegram_wireguard">svishnevskii/telegram_wireguard</a> repositry</h1>
 
 ---
 <h2>Quick installation:</h2>
 
 ```bash
-sudo wget https://github.com/QueenDekim/telegram-wireguard-vpn-bot/releases/download/release/Wireguard-installer-with-Adminpanel.sh && chmod 774 Wireguard-installer-with-Adminpanel.sh && ./Wireguard-installer-with-Adminpanel.sh
+sudo wget https://github.com/Onixwar/telegram-wireguard-vpn-bot/releases/download/release/Wireguard-installer-with-Adminpanel.sh && chmod 774 Wireguard-installer-with-Adminpanel.sh && ./Wireguard-installer-with-Adminpanel.sh
 ```
 - after configuring the wg, a choice will appear: `Hotite li ustanovit' srazu Telegram bota(1 - Da, 0 - Net):` We agree (press 1)
 - Then we specify the `Telegram API` of the bot, which we received from **BotFather** when creating the bot, `YCassa API`, which we also received from **BotFather** when setting up the Payment of the bot and `Telegram-id Admin` - your telegram account ID
@@ -139,11 +137,3 @@ in `texts.json` file:
   "add_trial_days": 7
 }
 ```
----
-
-|                                                links                                                                         |                                 description                                         |
-|:----------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------:|
-|[![Discord](https://img.shields.io/discord/1003119748382466049?label=Ascento%20TEAM%20Discord)](https://discord.gg/HVZ5UfuZnq)|                              Our Discord server                                     |
-|[![Static Badge](https://img.shields.io/badge/Discord-from__russia__with__love-purple)](https://about:blank)                  |                                My Discord tag                                       |
-|[![Static Badge](https://img.shields.io/badge/Telegram-%40QueenDek1m-blue)](https://t.me/QueenDek1m)                          |                                  My telegram                                        |
-|[![Static Badge](https://img.shields.io/badge/Telegram-%40Dekim__vpn__bot-blue)](https://t.me/Dekim_vpn_bot)                  |                     My telegram bot for example (fully operational)                 |
