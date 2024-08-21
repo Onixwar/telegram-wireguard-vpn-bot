@@ -168,9 +168,9 @@ ExecStart=/usr/bin/python3 $(pwd)/telegram_wireguard-master/main.py
 User=root
 
 [Install]
-WantedBy=multi-user.target">"/etc/systemd/system/befutureAdmin.service"
+WantedBy=multi-user.target">"/etc/systemd/system/vpnwg.service"
 			systemctl daemon-reload
-			sudo systemctl enable befutureAdmin.service
+			sudo systemctl enable vpnwg.service
 			clear
 			echo "Installed Bot"
 		fi
@@ -262,7 +262,7 @@ net.ipv6.conf.all.forwarding = 1" >/etc/sysctl.d/wg.conf
 	clear
 	echo "Wireguard Installed!!!"
 	if [[ ${BOT_AUTO_INSTALL} == '1' ]]; then
-		sudo systemctl start befutureAdmin.service
+		sudo systemctl start vpnwg.service
 	fi
 	# WireGuard might not work if we updated the kernel. Tell the user to reboot
 	if [[ ${WG_RUNNING} -ne 0 ]]; then
