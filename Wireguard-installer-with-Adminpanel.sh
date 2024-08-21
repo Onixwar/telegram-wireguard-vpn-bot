@@ -140,8 +140,8 @@ function installWireGuard() {
 			unzip main.zip
 			rm main.zip
 #      apt-get install git
-#      git clone https://github.com/svishnevskii/telegram_wireguard telegram_wireguard-master
-			pip install -r "$(pwd)/telegram_wireguard-master/requirements.txt"
+#      git clone https://github.com/Onixwar/telegram-wireguard-vpn-bot
+			pip install -r "$(pwd)/telegram-wireguard-vpn-bot/requirements.txt"
 			echo "{
 \"admin_tg_id\": ${ADMIN_ID_BOT},
 \"one_month_cost\": 269,
@@ -153,8 +153,8 @@ function installWireGuard() {
 \"UTC_time\": 3,
 \"tg_token\": \"${API_TOKEN_BOT}\",
 \"tg_shop_token\": \"${API_PAYMENT_BOT}\"
-}" >"$(pwd)/telegram_wireguard-master/config.json"
-			chmod 744 -R $(pwd)/telegram_wireguard-master/
+}" >"$(pwd)/telegram-wireguard-vpn-bot/config.json"
+			chmod 744 -R $(pwd)/telegram-wireguard-vpn-bot/
 			echo "[Unit]
 Description=Admin Bot for Wireguard
 After=multi-user.target
@@ -163,8 +163,8 @@ After=multi-user.target
 Type=simple
 Restart=always
 RestartSec=15
-WorkingDirectory=$(pwd)/telegram_wireguard-master
-ExecStart=/usr/bin/python3 $(pwd)/telegram_wireguard-master/main.py
+WorkingDirectory=$(pwd)/telegram-wireguard-vpn-bot
+ExecStart=/usr/bin/python3 $(pwd)/telegram-wireguard-vpn-bot/main.py
 User=root
 
 [Install]
