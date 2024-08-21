@@ -468,7 +468,7 @@ async def Work_with_Message(m: types.Message):
                 types.InlineKeyboardButton(e.emojize(f"6 мес. 📅 - {str(round(CONFIG['perc_6'] * CONFIG['one_month_cost']))} руб. Выгода {round(((6 - CONFIG['perc_6']) / 6) * 100)}%"),
                                            callback_data="BuyMonth:6"))
             Butt_payment.add(
-                types.InlineKeyboardButton(e.emojize(f"12 мес. 📅 - {str(round(CONFIG['perc_12'] * CONFIG['one_month_cost']))} руб. Выгода {round(((6 - CONFIG['perc_12']) / 12) * 100)}%"),
+                types.InlineKeyboardButton(e.emojize(f"12 мес. 📅 - {str(round(CONFIG['perc_12'] * CONFIG['one_month_cost']))} руб. Выгода {round(((12 - CONFIG['perc_12']) / 12) * 100)}%"),
                                            callback_data="BuyMonth:12"))
             await bot.send_message(m.chat.id,
                                    "<b>Оплатить можно с помощью Банковской карты!</b>\n\nВыберите на сколько месяцев хотите приобрести подписку:",
