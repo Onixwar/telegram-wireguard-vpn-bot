@@ -21,7 +21,7 @@ function newClient() {
 	BASE_IP=$(echo "$SERVER_WG_IPV4" | awk -F '.' '{ print $1"."$2"."$3 }')
 	until [[ ${IPV4_EXISTS} == '0' ]]; do
 		CLIENT_WG_IPV4="${BASE_IP}.${DOT_IP}"
-		IPV4_EXISTS=$(grep -c "$CLIENT_WG_IPV4/24" "/etc/wireguard/${SERVER_WG_NIC}.conf")
+		IPV4_EXISTS=$(grep -c "$CLIENT_WG_IPV4/18" "/etc/wireguard/${SERVER_WG_NIC}.conf")
 
 		if [[ ${IPV4_EXISTS} == '1' ]]; then
 			echo ""
