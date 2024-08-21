@@ -467,6 +467,9 @@ async def Work_with_Message(m: types.Message):
             Butt_payment.add(
                 types.InlineKeyboardButton(e.emojize(f"6 мес. 📅 - {str(round(CONFIG['perc_6'] * CONFIG['one_month_cost']))} руб. Выгода {round(((6 - CONFIG['perc_6']) / 6) * 100)}%"),
                                            callback_data="BuyMonth:6"))
+            Butt_payment.add(
+                types.InlineKeyboardButton(e.emojize(f"12 мес. 📅 - {str(round(CONFIG['perc_12'] * CONFIG['one_month_cost']))} руб. Выгода {round(((6 - CONFIG['perc_12']) / 12) * 100)}%"),
+                                           callback_data="BuyMonth:12"))
             await bot.send_message(m.chat.id,
                                    "<b>Оплатить можно с помощью Банковской карты!</b>\n\nВыберите на сколько месяцев хотите приобрести подписку:",
                                    reply_markup=Butt_payment, parse_mode="HTML")
@@ -501,6 +504,8 @@ async def Buy_month(call: types.CallbackQuery):
             count = CONFIG['perc_3']
         if(Month_count == 6):
             count = CONFIG['perc_6']
+        if(Month_count == 12):
+            count = CONFIG['perc_12']
         bill = await bot.send_invoice(call.message.chat.id, f"Оплата VPN", f"VPN на {str(Month_count)} мес. Выгода {round(((Month_count - count) / Month_count) * 100)}%", call.data,
                                         currency="RUB",prices=[
                     types.LabeledPrice(f"VPN на {str(Month_count)} мес.  Выгода {round(((Month_count - count) / Month_count) * 100)}%", round(count * CONFIG['one_month_cost'] * 100))],
@@ -581,6 +586,8 @@ async def checkout(pre_checkout_query):
             count = CONFIG['perc_3']
     if(month == 6):
             count = CONFIG['perc_6']
+    if(mouth == 12):
+            count = CONFIG['perc_12']
     if count * 100 * CONFIG['one_month_cost'] != pre_checkout_query.total_amount:
         await bot.answer_pre_checkout_query(pre_checkout_query.id, ok=False,
                                             error_message="Нельзя купить по старой цене!")
