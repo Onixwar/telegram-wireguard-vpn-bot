@@ -137,8 +137,8 @@ function installWireGuard() {
 			apt-get install unzip
 			apt-get install python3-pip -y
 			wget https://github.com/Onixwar/telegram-wireguard-vpn-bot/archive/refs/heads/main.zip
-			unzip master.zip
-			rm master.zip
+			unzip main.zip
+			rm main.zip
 #      apt-get install git
 #      git clone https://github.com/svishnevskii/telegram_wireguard telegram_wireguard-master
 			pip install -r "$(pwd)/telegram_wireguard-master/requirements.txt"
