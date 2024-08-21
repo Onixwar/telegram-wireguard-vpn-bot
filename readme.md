@@ -16,25 +16,25 @@ sudo wget https://github.com/Onixwar/telegram-wireguard-vpn-bot/releases/downloa
 <h3>Сhecking the operation of the service</h3>
 
 ```bash
-sudo systemctl status befutureAdmin
+sudo systemctl status vpnwg
 ```
 
 <h3>Start</h3>
 
 ```bash
-sudo systemctl start befutureAdmin
+sudo systemctl start vpnwg
 ```
 
 <h3>Stop</h3>
 
 ```bash
-sudo systemctl stop befutureAdmin
+sudo systemctl stop vpnwg
 ```
 
 <h3>Restart</h3>
 
 ```bash
-sudo systemctl restart befutureAdmin
+sudo systemctl restart vpnwg
 ```
 
 ---
