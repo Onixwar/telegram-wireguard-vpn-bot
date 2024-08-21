@@ -606,6 +606,8 @@ async def got_payment(m):
         count = CONFIG['perc_3']
     if(month == 6):
         count = CONFIG['perc_6']
+    if(mouth == 12):
+        count = CONFIG['perc_12']
     await bot.send_message(CONFIG["admin_tg_id"], f"Новая оплата подписки на <b>{month}</b> мес. <b>{round(count * CONFIG['one_month_cost'])}</b> руб.", parse_mode="HTML")
 
 
